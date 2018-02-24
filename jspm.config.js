@@ -2,7 +2,8 @@ SystemJS.config({
 	paths: {
 		"github:": "jspm_packages/github/",
 		"npm:": "jspm_packages/npm/",
-		"app/": "app/"
+		"app/": "app/",
+        "bundle.js": "https://rawgit.com/MaximBalaganskiy/amb-jspm/master/bundle.js"
 	},
 	browserConfig: {
 		"baseURL": "/",

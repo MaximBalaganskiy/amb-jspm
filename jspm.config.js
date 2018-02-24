@@ -2,7 +2,7 @@ SystemJS.config({
   paths: {
     "github:": "jspm_packages/github/",
     "npm:": "jspm_packages/npm/",
-	"app/": "app/"	
+    "app/": "app/"
   },
   browserConfig: {
     "baseURL": "/"
@@ -305,8 +305,8 @@ SystemJS.config({
   transpiler: "plugin-typescript",
   packages: {
     "app": {
-	  "main": "configure.ts",
-	  defaultExtension: "ts",
+      "main": "configure.ts",
+      "defaultExtension": "ts",
       "meta": {
         "*.ts": {
           "loader": "plugin-typescript"
@@ -334,6 +334,7 @@ SystemJS.config({
     "aurelia-loader-default": "npm:aurelia-loader-default@1.0.3",
     "aurelia-logging": "npm:aurelia-logging@1.4.0",
     "aurelia-logging-console": "npm:aurelia-logging-console@1.0.0",
+    "aurelia-materialize-bridge": "github:aurelia-ui-toolkits/aurelia-materialize-bridge@typescript",
     "aurelia-metadata": "npm:aurelia-metadata@1.0.3",
     "aurelia-pal": "npm:aurelia-pal@1.5.0",
     "aurelia-pal-browser": "npm:aurelia-pal-browser@1.4.0",
@@ -345,7 +346,29 @@ SystemJS.config({
     "aurelia-templating": "npm:aurelia-templating@1.7.0",
     "aurelia-templating-binding": "npm:aurelia-templating-binding@1.4.1",
     "aurelia-templating-resources": "npm:aurelia-templating-resources@1.5.4",
-    "aurelia-templating-router": "npm:aurelia-templating-router@1.3.1"
+    "aurelia-templating-router": "npm:aurelia-templating-router@1.3.1",
+    "aurelia-ui-toolkits/aurelia-materialize-bridge": "github:aurelia-ui-toolkits/aurelia-materialize-bridge@typescript",
+    "css": "github:systemjs/plugin-css@0.1.36",
+    "materialize-css": "npm:materialize-css@0.100.2"
   },
-  packages: {}
+  packages: {
+    "npm:materialize-css@0.100.2": {
+      "map": {
+        "jquery": "npm:jquery@2.2.4",
+        "hammerjs": "npm:hammerjs@2.0.8"
+      }
+    },
+    "github:aurelia-ui-toolkits/aurelia-materialize-bridge@typescript": {
+      "map": {
+        "aurelia-binding": "npm:aurelia-binding@1.6.0",
+        "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.3.2",
+        "aurelia-pal": "npm:aurelia-pal@1.5.0",
+        "aurelia-logging": "npm:aurelia-logging@1.4.0",
+        "aurelia-metadata": "npm:aurelia-metadata@1.0.3",
+        "aurelia-templating": "npm:aurelia-templating@1.7.0",
+        "aurelia-router": "npm:aurelia-router@1.5.0",
+        "aurelia-task-queue": "npm:aurelia-task-queue@1.2.1"
+      }
+    }
+  }
 });

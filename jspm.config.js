@@ -2,11 +2,9 @@ SystemJS.config({
 	paths: {
 		"github:": "jspm_packages/github/",
 		"npm:": "jspm_packages/npm/",
-		"app/": "app/",
-        "bundle.js": "https://rawgit.com/MaximBalaganskiy/amb-jspm/master/bundle.js"
+		"src/": "src/",
 	},
 	browserConfig: {
-//		"baseURL": "/",
 		"bundles": {
 			"bundle.js": [
 				"npm:materialize-css@0.100.2/dist/js/materialize.js",
@@ -738,7 +736,7 @@ SystemJS.config({
 	},
 	transpiler: "plugin-typescript",
 	packages: {
-		"app": {
+		"src": {
 			"main": "configure.ts",
 			"defaultExtension": "ts",
 			"meta": {

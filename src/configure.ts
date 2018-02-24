@@ -5,5 +5,5 @@ export async function configure(aurelia) {
 		.developmentLogging()
 		.plugin("aurelia-materialize-bridge", bridge => bridge.useAll());
 	await aurelia.start();
-	aurelia.setRoot("app/app");
+	aurelia.setRoot("src/app");
 }

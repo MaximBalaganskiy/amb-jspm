@@ -6,7 +6,7 @@ SystemJS.config({
         "bundle.js": "https://rawgit.com/MaximBalaganskiy/amb-jspm/master/bundle.js"
 	},
 	browserConfig: {
-		"baseURL": "/",
+//		"baseURL": "/",
 		"bundles": {
 			"bundle.js": [
 				"npm:materialize-css@0.100.2/dist/js/materialize.js",
